@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>COW | Tenderloin Tech</title>
+    <script defer data-domain="tenderloin.tech" src="https://research.riverside.rocks/js/plausible.js"></script>
+  </head>
+  <body>
+    <style>
+    #floatingImage {
+      position: absolute;
+    }
+    </style>
+    <img id="floatingImage" src="https://trentwil.es/a/149126939.jpeg" alt="Floating Image" width="100" height="100">
+  
+  <script>
+    const image = document.getElementById("floatingImage");
+    
+    // Function to move the image around the screen
+    function floatImage() {
+      const maxX = window.innerWidth - image.width;
+      const maxY = window.innerHeight - image.height;
+      const randomX = Math.random() * maxX;
+      const randomY = Math.random() * maxY;
+      image.style.left = randomX + "px";
+      image.style.top = randomY + "px";
+    }
+    
+    // Function to flash rainbow colors
+    function flashRainbow() {
+      const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+      let currentColorIndex = 0;
+      
+      function changeColor() {
+        image.style.backgroundColor = colors[currentColorIndex];
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+      }
+      
+      setInterval(changeColor, 200); // Change color every 200 milliseconds
+    }
+    
+    // Periodically float the image
+    setInterval(floatImage, 2000); // Float every 2 seconds
+    flashRainbow();
+  </script>
+  </body>
+</html>
