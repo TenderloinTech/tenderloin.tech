@@ -1,0 +1,22 @@
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-member {
+    flex: 1 0 21%; /* Grow and shrink, basis is 21% to allow for 4 items in a row with space in between */
+    margin: 1%;
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 0 46%; /* Allow 2 items per row on small screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .team-member {
+        flex: 1 0 96%; /* Allow 1 item per row on very small screens */
+    }
+}
