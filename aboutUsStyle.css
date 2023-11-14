@@ -7,6 +7,10 @@
 .team-member {
     flex: 1 0 21%; /* Grow and shrink, basis is 21% to allow for 4 items in a row with space in between */
     margin: 1%;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    padding-top: 20px;
 }
 
 @media (max-width: 600px) {
@@ -19,4 +23,12 @@
     .team-member {
         flex: 1 0 96%; /* Allow 1 item per row on very small screens */
     }
+}
+
+body {
+    background-image: url('assets/backgroundCow.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
 }
