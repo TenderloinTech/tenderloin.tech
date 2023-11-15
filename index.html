@@ -20,10 +20,19 @@
 <style>
   body {
         box-sizing: border-box;
+        height: 100vh;
+        width: 100vw;
+        margin-left: 10px;
+        margin-right: 10px;
+        overflow: auto;
       }
 
       img {
-        width: 40vw;
+        /* max-width: 100%; */
+        /* width: 36vw; 
+        height: auto; */
+        height: 35vh;
+        width: auto;
         display: block;
         margin: 0;
       }
@@ -39,7 +48,7 @@
 
       /* Responsive Font Sizes */
       h1 {
-        font-size: 6vw;
+        font-size: clamp(5px, 6vw, max(6vw, 100em));
       }
 
       p {
